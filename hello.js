@@ -12,7 +12,7 @@ if (Meteor.isClient) {
   Template.body.helpers({
     tests: function () {
 
-      return Test.find({});
+      return Test.find({}, {sort: {createdAt: -1}});
 
     }
   })
